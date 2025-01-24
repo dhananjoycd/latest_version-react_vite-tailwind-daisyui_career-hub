@@ -16,3 +16,7 @@ https://github.com/remix-run/react-router
 
 - npm i react-router-dom (always need)
 - npm install localforage match-sorter sort-by
+
+* https://www.npmjs.com/package/react-helmet-async
+
+- npm i react-helmet-async
