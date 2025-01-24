@@ -10,7 +10,9 @@
 
 * npm i -D daisyui@beta
 
-- for react router dom : https://github.com/remix-run/react-router
+- for react router dom : https://www.npmjs.com/package/react-router-dom
 
-* npm i react-router-dom (always need)
-* npm install localforage match-sorter sort-by
+https://github.com/remix-run/react-router
+
+- npm i react-router-dom (always need)
+- npm install localforage match-sorter sort-by
