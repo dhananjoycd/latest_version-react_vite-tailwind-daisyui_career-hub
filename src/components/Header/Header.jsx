@@ -1,4 +1,8 @@
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
+
 const Header = () => {
+  const { user, loading } = useContext(AuthContext);
   return (
     <div className="navbar bg-base-100 shadow-sm">
       <div className="navbar-start">
@@ -42,7 +46,17 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+        <p className="">
+          {loading ? (
+            "Loading..."
+          ) : (
+            <img
+              className="h-10 border-2 rounded-3xl"
+              src={`${user?.photoURL}`}
+              alt="pp"
+            />
+          )}
+        </p>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -68,7 +82,7 @@ const Header = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        <a className="btn">{user?.displayName}</a>
       </div>
     </div>
   );
