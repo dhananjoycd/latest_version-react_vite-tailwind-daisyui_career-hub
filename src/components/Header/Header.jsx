@@ -52,7 +52,10 @@ const Header = () => {
           ) : (
             <img
               className="h-10 border-2 rounded-3xl"
-              src={`${user?.photoURL}`}
+              src={`${
+                user?.photoURL ||
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Face-smile.svg/480px-Face-smile.svg.png "
+              }`}
               alt="pp"
             />
           )}
@@ -82,7 +85,7 @@ const Header = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">{user?.displayName}</a>
+        <a className="btn">{user?.displayName || "Guest"}</a>
       </div>
     </div>
   );
